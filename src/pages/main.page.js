@@ -3,10 +3,8 @@ export class MainPage {
     constructor (page)
      {
         this.page = page;
-
         this.signuplink = page.getByRole('link', { name: 'Sign up' });
         this.loginlink = page.getByRole('link', { name: 'Login' });
-        //this.newarticle = page.getByRole('button',{name: 'New article'})
         this.newarticle = page.locator('.nav-link:has-text("New Article")');
         this.firstArticle = page.locator('.article-preview').first();
      }
